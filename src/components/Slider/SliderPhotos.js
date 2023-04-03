@@ -12,7 +12,7 @@ const SliderPhotos = () => {
   ];
 
   return (
-    <div className={classes.frame}>
+    <div>
       <Slide
         slidesToScroll={2}
         slidesToShow={2}

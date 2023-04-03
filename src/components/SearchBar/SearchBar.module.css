@@ -2,8 +2,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  position: sticky;
-  top: 0;
 }
 
 .items li {

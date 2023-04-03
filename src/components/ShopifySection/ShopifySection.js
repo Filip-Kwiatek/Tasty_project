@@ -1,9 +1,38 @@
 import React from "react";
 
+import Button from "../UI/Button";
+import ShopifyProduct from "./ShopifyProduct";
 import classes from "./ShopifySection.module.css";
 
-const ShopifySection = () => {
-  return <div className={classes.shopping_frame}>Rest content</div>;
+const ShopifySection = (props) => {
+  return (
+    <React.Fragment>
+      <div className={classes.shopping}>
+        <ul>
+          <li>Specific kind of products 1</li>
+          <li>
+            <Button>Show all Products</Button>
+          </li>
+        </ul>
+      </div>
+      <div className={classes.products}>
+        <ul>
+          <li>
+            <ShopifyProduct />
+          </li>
+          <li>
+            <ShopifyProduct />
+          </li>
+          <li>
+            <ShopifyProduct />
+          </li>
+          <li>
+            <ShopifyProduct />
+          </li>
+        </ul>
+      </div>
+    </React.Fragment>
+  );
 };
 
 export default ShopifySection;

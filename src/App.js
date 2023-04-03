@@ -11,8 +11,8 @@ function App() {
     <Wrapper>
       <SearchBar />
       <Navbar />
-      <Slider />
-      <ShopifySection/>
+      <Slider /> 
+      <ShopifySection />
     </Wrapper>
   );
 }
