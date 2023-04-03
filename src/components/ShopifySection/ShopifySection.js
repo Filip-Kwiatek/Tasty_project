@@ -17,18 +17,7 @@ const ShopifySection = (props) => {
       </div>
       <div className={classes.products}>
         <ul>
-          <li>
-            <ShopifyProduct />
-          </li>
-          <li>
-            <ShopifyProduct />
-          </li>
-          <li>
-            <ShopifyProduct />
-          </li>
-          <li>
-            <ShopifyProduct />
-          </li>
+          <ShopifyProduct/>
         </ul>
       </div>
     </React.Fragment>

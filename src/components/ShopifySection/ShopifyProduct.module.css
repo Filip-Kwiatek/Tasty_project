@@ -2,12 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
   align-content: baseline;
 }
 
-.item > p {
-    margin-bottom: -4%;
+.item > li {
+  text-align: justify;
 }
 
 img {

@@ -1,5 +1,5 @@
 .shopping {
-  margin-top: 4%;
+  margin-top: 3%;
   width: 100%;
 }
 .shopping ul {
@@ -19,14 +19,8 @@
   margin-right: 3%;
 }
 
-.products ul {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .products li {
-  width: calc(100%/4);
+  width: calc(100% / 4);
   list-style-type: none;
   padding: 10px;
   font-size: 18px;
