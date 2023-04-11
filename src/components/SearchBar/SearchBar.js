@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import SearchBarForm from "./SearchBarForm.js";
 import classes from "./SearchBar.module.css";
@@ -7,14 +8,14 @@ import SearchBarAd from "./SearchBarAd.js";
 const SearchBar = () => {
   return (
     <div>
-      <SearchBarAd />
+      <Link to="/sale"><SearchBarAd /></Link>
       <ul className={classes.items}>
-        <li>LOGO</li>
+        <li><Link to="/">LOGO</Link></li>
         <li>
           <SearchBarForm />
         </li>
-        <li>My account</li>
-        <li>Basket</li>
+        <li><Link to="/account">My account</Link></li>
+        <li><Link to="/basket">Basket</Link></li>
       </ul>
     </div>
   );

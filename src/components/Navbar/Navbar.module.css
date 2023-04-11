@@ -2,7 +2,6 @@
   list-style-type: none;
   display: flex;
   align-items: baseline;
-  padding-bottom: 15px;
   border-top: 2px solid rgb(203, 201, 201);
 }
 
@@ -12,10 +11,11 @@
   font-weight: 500;
   font-size: 18px;
   padding: 10px;
+  display: block;
 }
 
 .links li {
   margin-left: 20px;
-  margin-top: 28px;
+  margin-top: 20px;
   letter-spacing: 2px;
 }

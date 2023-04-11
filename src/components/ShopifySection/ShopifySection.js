@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Button from "../UI/Button";
 import ShopifyProduct from "./ShopifyProduct";
@@ -11,14 +12,12 @@ const ShopifySection = (props) => {
         <ul>
           <li>Specific kind of products 1</li>
           <li>
-            <Button>Show all Products</Button>
+            <Link to="/equipment"><Button>Show all Products</Button></Link>
           </li>
         </ul>
       </div>
       <div className={classes.products}>
-        <ul>
-          <ShopifyProduct/>
-        </ul>
+        <ShopifyProduct />
       </div>
     </React.Fragment>
   );
