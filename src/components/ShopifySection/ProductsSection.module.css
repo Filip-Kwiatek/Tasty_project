@@ -1,0 +1,56 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: baseline;
+}
+
+.items > li {
+  text-align: justify;
+}
+
+img {
+  width: 85%;
+  padding: 1%;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+/* CSS Dynamic Hovering 
+
+.image {
+  display: block;
+  width: 85%;
+  height: 90px;
+  position: relative;
+}
+
+.normalImage,
+.hoverImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+}
+
+.image .hoverImage {
+  display: none;
+}
+
+.image:hover .normalImage {
+  display: none;
+}
+
+.image:hover .hoverImage {
+  display: block;
+}
+*/

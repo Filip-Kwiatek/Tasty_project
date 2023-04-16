@@ -1,0 +1,51 @@
+input[name="login"] {
+  width: 400px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  border: 2px solid rgb(198, 197, 197);
+  font-weight: 400;
+  outline: none;
+}
+
+input[name="password"] {
+  width: 400px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  border: 2px solid rgb(198, 197, 197);
+  font-weight: 400;
+  outline: none;
+}
+
+label {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 2px;
+}
+
+input:focus {
+  border: 2px solid black;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+}
+
+.forms li {
+  list-style-type: none;
+  letter-spacing: 2px;
+  padding-top: 10%;
+}
+
+.forms button {
+  width: 400px;
+}
+
+.forms a {
+  text-decoration: none;
+  color: black;
+}

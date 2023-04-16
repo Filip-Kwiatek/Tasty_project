@@ -9,6 +9,7 @@ import Recipes from "./navPages/Recipes";
 
 import Account from "./searchBarPages/Account";
 import Basket from "./searchBarPages/Basket";
+import NewAccount from "./searchBarPages/NewAccount";
 
 import "./index.css";
 import App from "./App";
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/basket",
     element: <Basket />,
+  },
+  {
+    path: "/account:register",
+    element: <NewAccount />,
   },
 ]);
 

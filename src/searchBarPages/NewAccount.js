@@ -1,9 +1,9 @@
-import { Form, Link } from "react-router-dom";
+import { Form } from "react-router-dom";
 import SearchBar from "../components/SearchBar/SearchBar";
 import Navbar from "../components/Navbar/Navbar";
 import Button from "../components/UI/Button";
 
-import classes from "./Account.module.css";
+import classes from "./NewAccount.module.css";
 
 const Account = () => {
   return (
@@ -17,14 +17,19 @@ const Account = () => {
             <input type="text" name="login" />
           </li>
           <li>
-            <label>Register:</label>
+          <label>Email:</label>
+            <input type="text" name="email" />
+          </li>
+          <li>
+          <label>Password:</label>
             <input type="text" name="password" />
           </li>
           <li>
-            <Button>Login</Button>
+          <label>Repeat password:</label>
+            <input type="text" name="repeat-password" />
           </li>
           <li>
-            <Link to="/account:register">New Account</Link>
+            <Button>Register</Button>
           </li>
         </ul>
       </Form>

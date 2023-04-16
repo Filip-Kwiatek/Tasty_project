@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Button from "../UI/Button";
-import ShopifyProduct from "./ShopifyProduct";
+import ProductsSection from "./ProductsSection";
 import classes from "./ShopifySection.module.css";
 
 const ShopifySection = (props) => {
@@ -10,14 +10,14 @@ const ShopifySection = (props) => {
     <React.Fragment>
       <div className={classes.shopping}>
         <ul>
-          <li>Specific kind of products 1</li>
+          <li>Boxes</li>
           <li>
             <Link to="/equipment"><Button>Show all Products</Button></Link>
           </li>
         </ul>
       </div>
       <div className={classes.products}>
-        <ShopifyProduct />
+        <ProductsSection />
       </div>
     </React.Fragment>
   );

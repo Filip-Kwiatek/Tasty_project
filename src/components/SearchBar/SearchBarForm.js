@@ -5,7 +5,7 @@ import classes from "./SearchBarForm.module.css";
 const SearchBarForm = () => {
   return (
     <form className={classes}>
-      <input type="text" />
+      <input type="text" placeholder="Search for" />
     </form>
   );
 };
