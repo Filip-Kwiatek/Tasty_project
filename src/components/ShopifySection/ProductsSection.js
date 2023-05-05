@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import classes from "./ProductsSection.module.css";
 import { Link } from "react-router-dom";
-import items from "./items"
+import items from "./items";
 
 const Item = (props) => {
   const [isOnHover, setIsOnHover] = useState(false);
@@ -33,16 +33,34 @@ const Item = (props) => {
       <p>Rate: {props.rate} ★</p>
       <p>Price: {props.price}</p>
     </li>
-  )
-}
+  );
+};
 
 const ProductsSection = () => {
-  const shopList = items.map((item) => (
-    <Item
-      key={item.id}
-      {...item}
-    />
-  ));
+  const shopList = items.map((item) => <Item key={item.id} {...item} />);
+
+  /*
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users/1/posts")
+      .then((response) => response.json())
+      .then((json) => json.map(el => ({
+        id: el.id,
+        title: el.title,
+        rate: el.id, 
+        price: el.userId
+      })))
+      .then((transformedJson) => {
+        setItems(transformedJson)
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }, [])
+
+  */
+ 
   return (
     <div>
       <ul className={classes.items}>{shopList}</ul>

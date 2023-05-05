@@ -14,12 +14,89 @@
   display: block;
 }
 
-.links a:hover{
-  border-bottom: 2px solid rgb(203, 201, 201);
+.links a:hover {
+  border-bottom: 2px solid black;
 }
 
 .links li {
   margin-left: 20px;
   margin-top: 20px;
   letter-spacing: 2px;
+}
+
+.dropdown_equipment {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdown_equipment_content a:hover {
+  border-bottom: 1px solid black;
+}
+
+.dropdown_equipment_content {
+  columns: 2;
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 42px;
+  left: 0px;
+  width: 1000px;
+  height: 560px;
+  z-index: 1;
+  vertical-align: bottom;
+}
+
+.dropdown_equipment_content li {
+  text-align: left;
+  list-style-type: none;
+  display: flex;
+  align-items: stretch;
+  padding: 1px;
+}
+
+.dropdown_equipment_content li:nth-child(-n + 9) a {
+  font-weight: 700;
+}
+
+.dropdown_equipment:hover .dropdown_equipment_content {
+  display: block;
+}
+
+/**/
+
+.dropdown_edibles {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdown_edibles_content a:hover {
+  border-bottom: 1px solid black;
+}
+
+.dropdown_edibles_content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 210px;
+  height: 360px;
+  z-index: 1;
+  text-align: left;
+  top: 0px;
+  left: 0px;
+}
+
+.dropdown_edibles_content li {
+  text-align: left;
+  list-style-type: none;
+  display: flex;
+  align-items: baseline;
+  padding: 1px;
+}
+
+.dropdown_edibles:hover .dropdown_edibles_content {
+  display: block;
 }

@@ -10,26 +10,26 @@ const Account = () => {
     <>
       <SearchBar />
       <Navbar />
-      <Form method="post" action="/events" className={classes.forms}>
+      <Form method="post"  className={classes.forms}>
         <ul>
           <li>
             <label>Login:</label>
             <input type="text" name="login" />
           </li>
           <li>
-          <label>Email:</label>
+            <label>Email:</label>
             <input type="text" name="email" />
           </li>
           <li>
-          <label>Password:</label>
+            <label>Password:</label>
             <input type="text" name="password" />
           </li>
           <li>
-          <label>Repeat password:</label>
+            <label>Repeat password:</label>
             <input type="text" name="repeat-password" />
           </li>
           <li>
-            <Button>Register</Button>
+            <Button type="submit">Register</Button>
           </li>
         </ul>
       </Form>
