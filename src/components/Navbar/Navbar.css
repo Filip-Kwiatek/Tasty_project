@@ -5,6 +5,33 @@
   border-top: 2px solid rgb(203, 201, 201);
 }
 
+.fixed {
+  transition-duration: 0.4s;
+  position: fixed;
+  display: flex;
+  align-content: center;
+  background-color: white;
+  list-style-type: none;
+  top: 28px;
+  width: 100%;
+  z-index: 2;
+  padding-bottom: 8px;
+  border: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  letter-spacing: 2px;
+}
+
+.fixed li {
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.fixed a {
+  text-decoration: none;
+  color: black;
+}
+
 .links a {
   text-decoration: none;
   color: black;

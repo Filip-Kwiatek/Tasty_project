@@ -2,6 +2,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
+  position: fixed;
+  top: -18px;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
+
+.items_back{
+  background-color: black;
 }
 
 .items a {
@@ -24,7 +33,7 @@
   margin-right: 45%;
 }
 
-.basket_pop_up{
+.basket_pop_up {
   text-align: justify;
   position: absolute;
   margin-top: 50px;

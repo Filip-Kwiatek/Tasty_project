@@ -6,7 +6,7 @@ import classes from "./SearchBar.module.css";
 import SearchBarAd from "./SearchBarAd.js";
 
 const SearchBar = () => {
-  const quantity = 1;
+  const quantity = 0;
   const [ isBasketVisible, setIsBasketVisible ] = useState(false);
 
   const renderBasketWhenQuantityIsZero = () => {

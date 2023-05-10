@@ -1,19 +1,26 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import classes from "./Navbar.module.css";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [scroll, setIsScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScroll(window.scrollY > 900);
+    });
+  }, []);
+  console.log(scroll);
   return (
     <div>
       <div>
-        <ul className={classes.links}>
+        <ul className={`links ${scroll ? "fixed" : ""}`}>
           <li>
             <Link to="/sale">Sale</Link>
           </li>
-          <li className={classes.dropdown_equipment}>
+          <li className={`dropdown_equipment`}>
             <Link to="/equipment">Equipment</Link>
-            <ul className={classes.dropdown_equipment_content}>
+            <ul className={`dropdown_equipment_content`}>
               <li>
                 <Link to="/containers">Containers</Link>
               </li>
@@ -67,9 +74,9 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li className={classes.dropdown_edibles}>
+          <li className={`dropdown_edibles`}>
             <Link to="/edibles">Edibles</Link>
-            <ul className={classes.dropdown_edibles_content}>
+            <ul className={`dropdown_edibles_content`}>
               <li>
                 <Link to="/seasonings">Seasonings</Link>
               </li>
