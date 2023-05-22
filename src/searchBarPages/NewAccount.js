@@ -3,14 +3,14 @@ import SearchBar from "../components/SearchBar/SearchBar";
 import Navbar from "../components/Navbar/Navbar";
 import Button from "../components/UI/Button";
 
-import classes from "./NewAccount.module.css";
+import "./NewAccount.css";
 
 const Account = () => {
   return (
     <>
       <SearchBar />
       <Navbar />
-      <Form method="post"  className={classes.forms}>
+      <Form method="post"  className={`forms`}>
         <ul>
           <li>
             <label>Login:</label>

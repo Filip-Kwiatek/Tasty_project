@@ -5,14 +5,10 @@ import "react-slideshow-image/dist/styles.css";
 
 import classes from "./SliderPhotos.module.css";
 
-const SliderPhotos = () => {
-  const images = [
-    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona-Szama-Mieszanka-Przypraw-zastepujaca-sol-ZIOLA_KOKSA_5.jpg?v=1673222123",
-    "https://cdn.shopify.com/s/files/1/0559/7881/9741/files/Pad_Thai_-_prosty_przepis_Policzona_Szama_blog.jpg?v=1669244451",
-  ];
-
+const SliderPhotos = (props) => {
+  const images = props.photosForSlider;
   return (
-    <div>
+    <div className={classes.container}>
       <Slide
         slidesToScroll={2}
         slidesToShow={2}

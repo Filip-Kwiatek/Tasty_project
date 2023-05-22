@@ -1,10 +1,10 @@
 import React from "react";
 
-import classes from "./SearchBarForm.module.css";
+import "./SearchBarForm.css";
 
 const SearchBarForm = () => {
   return (
-    <form className={classes}>
+    <form className={`classes`}>
       <input type="text" placeholder="Search for" />
     </form>
   );
