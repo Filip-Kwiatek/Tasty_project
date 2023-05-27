@@ -1,5 +1,41 @@
 .text {
-    font-size: 14vh;
-    text-align: center;
-    background-color:rgb(195, 232, 239);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(235, 238, 239);
+  letter-spacing: 3px;
+  align-content: baseline;
+}
+
+.text > * {
+  width: 510px;
+  text-align: left;
+}
+
+.header {
+  font-size: 22px;
+  margin-bottom: 1%;
+}
+
+.mainText {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 4%;
+}
+
+.descriptionText {
+  font-size: 22px;
+  margin-bottom: 3%;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.button > a {
+  text-decoration: none;
 }

@@ -1,0 +1,15 @@
+.informations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 22px;
+  background-color: rgb(247, 245, 245);
+  height: 140px;
+}
+
+ul > li:first-child {
+    font-weight: 700;
+    margin-bottom: 20px;
+}

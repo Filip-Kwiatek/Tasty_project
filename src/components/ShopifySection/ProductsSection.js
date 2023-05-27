@@ -60,7 +60,7 @@ const ProductsSection = () => {
   }, [])
 
   */
- 
+
   return (
     <div>
       <ul className={classes.items}>{shopList}</ul>

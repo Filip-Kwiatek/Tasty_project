@@ -7,6 +7,9 @@ import classes from "./SliderPhotos.module.css";
 
 const SliderPhotos = (props) => {
   const images = props.photosForSlider;
+  const mainText = props.mainTextForSlider;
+  const headerText = props.headerTextForSlider;
+  const descriptionText = props.descriptionTextForSlider;
   return (
     <div className={classes.container}>
       <Slide
@@ -19,13 +22,13 @@ const SliderPhotos = (props) => {
           <div style={{ backgroundImage: `url(${images[0]})` }}></div>
         </div>
         <div className={classes.slider}>
-          <SliderText />
+          <SliderText mainText={mainText[0]} headerText={headerText[0]} descriptionText={descriptionText[0]}/>
         </div>
         <div className={classes.slider}>
           <div style={{ backgroundImage: `url(${images[1]})` }}></div>
         </div>
         <div className={classes.slider}>
-          <SliderText />
+          <SliderText mainText={mainText[1]} headerText={headerText[1]} descriptionText={descriptionText[1]}/>
         </div>
       </Slide>
     </div>
