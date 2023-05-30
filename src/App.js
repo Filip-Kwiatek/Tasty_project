@@ -45,9 +45,18 @@ function App(props) {
   const titleTextForSpices = ["Spices"];
 
   const photosForBoxes = [
-    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Pojemnik_LunchBOX_szklany_bambus-1520ml-1.jpg?v=1658073713",
-    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona-Szama-Mieszanka-Przypraw-zastepujaca-sol-ZIOLA_KOKSA_5.jpg?v=1673222123",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
   ];
+
+  const priceForBoxes = [10, 10, 10, 10, 10, 10, 10, 10];
+  const rateForBoxes = [5, 5, 5, 5, 5, 5, 5, 5];
   const photosForSpices = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/ZestawprzyprawPoliczonaSzama.jpg?v=1639427887&width=540",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/PrzyprawaSzama1-1.jpg?v=1624987253&width=540",
@@ -55,12 +64,25 @@ function App(props) {
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama-Przyprawa_Mieszanka_Arabska-1-1.jpg?v=1637601247&width=540",
   ];
 
+  const priceForSpices = [5, 5, 5, 5];
+  const rateForSpices = [5, 5, 5, 5, 5, 5, 5, 5];
+
   const photosOnHoverForBoxes = [
-    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona-Szama-Mieszanka-Przypraw-zastepujaca-sol-ZIOLA_KOKSA_5.jpg?v=1673222123",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
   ];
 
   const photosOnHoverForSpices = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Przyprawa_Chinska.jpg?v=1637602122&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/PrzyprawaSzama1-1.jpg?v=1624987253&width=900",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona-Szama-Mieszanka-Przypraw-zastepujaca-sol-ZIOLA_KOKSA_1.jpg?v=1626950997&width=720",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama-Przyprawa_Mieszanka_Arabska-1-1.jpg?v=1637601247&width=900",
   ];
 
   return (
@@ -74,9 +96,11 @@ function App(props) {
         descriptionTextForSlider={descriptionTextForFoodTypeOne}
       />
       <ShopifySection
+        pricesForShopSection={priceForBoxes}
         titleTextForShopSection={titleTextForBoxes}
         photosForShopSection={photosForBoxes}
         photosOnHoverForShopSection={photosOnHoverForBoxes}
+        rateForShopSection={rateForBoxes}
       />
       <SliderPhotos
         photosForSlider={photosForFoodTypeTwo}
@@ -85,11 +109,13 @@ function App(props) {
         descriptionTextForSlider={descriptionTextForFoodTypeTwo}
       />
       <ShopifySection
+        pricesForShopSection={priceForSpices}
         titleTextForShopSection={titleTextForSpices}
         photosForShopSection={photosForSpices}
         photosOnHoverForShopSection={photosOnHoverForSpices}
+        rateForShopSection={rateForSpices}
       />
-      <AdInformation/>
+      <AdInformation />
     </Wrapper>
   );
 }

@@ -9,7 +9,7 @@
   height: 140px;
 }
 
-ul > li:first-child {
+.informations li:first-child {
     font-weight: 700;
     margin-bottom: 20px;
 }

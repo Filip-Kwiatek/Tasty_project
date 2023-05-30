@@ -2,11 +2,9 @@ import { useState } from "react";
 
 import classes from "./ProductsSection.module.css";
 import { Link } from "react-router-dom";
-import items from "./items";
 
 const Item = (props) => {
   const [isOnHover, setIsOnHover] = useState(false);
-
   return (
     <li>
       <p>
@@ -20,7 +18,7 @@ const Item = (props) => {
             }}></div>
           </div> */}
           <img
-            src={isOnHover ? props.img : props.imgOnHover}
+            src={isOnHover ? props.photoUrlOnHover : props.photoUrl}
             onMouseOut={() => setIsOnHover(true)}
             onMouseOver={() => setIsOnHover(false)}
             /*style={{
@@ -30,14 +28,22 @@ const Item = (props) => {
           />
         </Link>
       </p>
-      <p>Rate: {props.rate} ★</p>
-      <p>Price: {props.price}</p>
+      <p>Rate: {props.rate}★</p>
+      <p>Price: {props.price}$</p>
     </li>
   );
 };
 
-const ProductsSection = () => {
-  const shopList = items.map((item) => <Item key={item.id} {...item} />);
+const ProductsSection = (props) => {
+  const shopList = props.photos.map((url, index) => (
+    <Item
+      key={url}
+      photoUrl={url}
+      photoUrlOnHover={props.photosOnHover[index]}
+      price={props.price[index]}
+      rate={props.rate[index]}
+    />
+  ));
 
   /*
   const [items, setItems] = useState([]);

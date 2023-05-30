@@ -10,6 +10,8 @@ const ShopifySection = (props) => {
   const photos = props.photosForShopSection;
   const photosOnHover = props.photosOnHoverForShopSection;
 
+  const price = props.pricesForShopSection;
+  const rate = props.rateForShopSection;
   return (
     <React.Fragment>
       <div className={classes.shopping}>
@@ -24,8 +26,10 @@ const ShopifySection = (props) => {
       </div>
       <div className={classes.products}>
         <ProductsSection
-          photos={photos[1]}
-          photosOnHover={photosOnHover[1]}
+          photos={photos}
+          photosOnHover={photosOnHover}
+          price={price}
+          rate={rate}
         />
       </div>
     </React.Fragment>
