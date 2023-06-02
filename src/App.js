@@ -6,6 +6,7 @@ import Wrapper from "./components/UI/Wrapper";
 import SliderPhotos from "./components/Slider/SliderPhotos";
 import ShopifySection from "./components/ShopifySection/ShopifySection";
 import AdInformation from "./components/AdInformation/AdInformation";
+import FavoriteCategoriesSection from "./components/FavoriteCategoriesSection/FavoriteCategoriesSection.js";
 
 function App(props) {
   const photosForFoodTypeOne = [
@@ -116,6 +117,7 @@ function App(props) {
         rateForShopSection={rateForSpices}
       />
       <AdInformation />
+      <FavoriteCategoriesSection />
     </Wrapper>
   );
 }

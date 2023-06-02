@@ -1,0 +1,41 @@
+header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.categories {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-right: 50px;
+}
+
+.categories li {
+  margin-left: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-align: center;
+  background-color: rgb(249, 245, 245);
+}
+
+.categories a {
+  text-decoration: none;
+  color: black;
+}
+
+.categories img {
+  margin-top: 12px;
+  margin-bottom: 12x;
+  max-width: 350px;
+  max-height: 180px;
+  border: 2px solid rgb(247, 245, 245);
+}
+
+.categories img:hover {
+  transform: translateY(-8px);
+  border: 2px solid rgb(247, 245, 245);
+}

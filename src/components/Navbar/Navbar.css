@@ -25,7 +25,6 @@
 .fixed li {
   margin-left: 20px;
   font-size: 18px;
-  margin-top: 2px;
 }
 
 .fixed a {
@@ -57,7 +56,7 @@
 
 .links li {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 18px;
   letter-spacing: 2px;
 }
 
