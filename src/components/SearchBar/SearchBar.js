@@ -6,7 +6,6 @@ import "./SearchBar.css";
 import SearchBarAd from "./SearchBarAd.js";
 
 const SearchBar = (props) => {
-
   const quantity = 0;
   const [isBasketVisible, setIsBasketVisible] = useState(false);
 

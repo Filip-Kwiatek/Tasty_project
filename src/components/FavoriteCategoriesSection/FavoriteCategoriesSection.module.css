@@ -11,6 +11,7 @@ header {
   align-items: center;
   align-content: center;
   margin-right: 50px;
+  margin-bottom: 50px;
 }
 
 .categories li {
@@ -38,4 +39,5 @@ header {
 .categories img:hover {
   transform: translateY(-8px);
   border: 2px solid rgb(247, 245, 245);
+  box-shadow: 9px 8px 24px 0px rgba(66, 68, 90, 1);
 }

@@ -7,6 +7,7 @@ import SliderPhotos from "./components/Slider/SliderPhotos";
 import ShopifySection from "./components/ShopifySection/ShopifySection";
 import AdInformation from "./components/AdInformation/AdInformation";
 import FavoriteCategoriesSection from "./components/FavoriteCategoriesSection/FavoriteCategoriesSection.js";
+import Newsletter from "./components/Newsletter/Newsletter.js";
 
 function App(props) {
   const photosForFoodTypeOne = [
@@ -18,12 +19,17 @@ function App(props) {
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/files/Policzona_Szama_Mieszanki_Przypraw_a5fd467e-1d64-49d4-869b-ca8162bda70f.jpg?v=1679410836&width=1200",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/ZestawprzyprawPoliczonaSzama.jpg?v=1639427887&width=900",
   ];
+  const photosForFoodTypeThree = [
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/files/Policzona_Szama_WOK_homePage.jpg?v=1679416092&width=1001",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/files/Policzona_Szama_WOK_homePage.jpg?v=1679416092&width=1001",
+  ];
 
   const headerTextForFoodTypeOne = [
     "Prepare meals in a healthy and fast way",
     "New line of Lunch Boxes is now available",
   ];
   const headerTextForFoodTypeTwo = ["Try now!", "Try now!"];
+  const headerTextForFoodTypeThree = ["Hot Stuff", "Hot Stuff"];
   const mainTextForFoodTypeOne = [
     "Lunch Boxes from Shama",
     "Stainless steel Lunch Boxes",
@@ -32,7 +38,10 @@ function App(props) {
     "Special mix of spices",
     "Special mix of spices",
   ];
-
+  const mainTextForFoodTypeThree = [
+    "Original forged steel wok",
+    "Original forged steel wok",
+  ];
   const descriptionTextForFoodTypeOne = [
     "Natural materials - glass, bamboo, stainless steel.",
     "Only such boxes - durable and hygienic. The highest quality.",
@@ -41,7 +50,10 @@ function App(props) {
     "Spices without or with reduced salt content. ",
     "Spices without or with reduced salt content. ",
   ];
-
+  const descriptionTextForFoodTypeThree = [
+    "Real oriental taste within reach",
+    "Real oriental taste within reach",
+  ];
   const titleTextForBoxes = ["Boxes"];
   const titleTextForSpices = ["Spices"];
 
@@ -118,6 +130,13 @@ function App(props) {
       />
       <AdInformation />
       <FavoriteCategoriesSection />
+      <SliderPhotos
+        photosForSlider={photosForFoodTypeThree}
+        mainTextForSlider={mainTextForFoodTypeThree}
+        headerTextForSlider={headerTextForFoodTypeThree}
+        descriptionTextForSlider={descriptionTextForFoodTypeThree}
+      />
+      <Newsletter />
     </Wrapper>
   );
 }
