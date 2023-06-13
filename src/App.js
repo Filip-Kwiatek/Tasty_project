@@ -56,6 +56,7 @@ function App(props) {
   ];
   const titleTextForBoxes = ["Boxes"];
   const titleTextForSpices = ["Spices"];
+  const titleTextForPans = ["Pans"];
 
   const photosForBoxes = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
@@ -80,6 +81,20 @@ function App(props) {
   const priceForSpices = [5, 5, 5, 5];
   const rateForSpices = [5, 5, 5, 5, 5, 5, 5, 5];
 
+  const photosForPans = [
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cmgora_b16d60e3-4f6c-4676-9d1b-0f6e41528c49.jpg?v=1646130349&width=540",
+  ];
+
+  const priceForPans = [10, 10, 10, 10, 10, 10, 10, 10];
+  const rateForPans = [5, 5, 5, 5, 5, 5, 5, 5];
+
   const photosOnHoverForBoxes = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
@@ -96,6 +111,17 @@ function App(props) {
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/PrzyprawaSzama1-1.jpg?v=1624987253&width=900",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona-Szama-Mieszanka-Przypraw-zastepujaca-sol-ZIOLA_KOKSA_1.jpg?v=1626950997&width=720",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama-Przyprawa_Mieszanka_Arabska-1-1.jpg?v=1637601247&width=900",
+  ];
+
+  const photosOnHOverFosPans = [
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Patelniastalowanierdzewna-STALGAST28cm_0c87a373-f906-4aeb-9ac6-76595d3f8ec0_1800x1800.jpg?v=1646130349",
   ];
 
   return (
@@ -137,6 +163,13 @@ function App(props) {
         descriptionTextForSlider={descriptionTextForFoodTypeThree}
       />
       <Newsletter />
+      <ShopifySection
+        pricesForShopSection={priceForPans}
+        titleTextForShopSection={titleTextForPans}
+        photosForShopSection={photosForPans}
+        photosOnHoverForShopSection={photosOnHOverFosPans}
+        rateForShopSection={rateForPans}
+      />
     </Wrapper>
   );
 }
