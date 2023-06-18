@@ -59,6 +59,7 @@ function App(props) {
   const titleTextForSpices = ["Spices"];
   const titleTextForPans = ["Pans"];
   const titleTextForFavorites = ["Favorite Szama Accessories"];
+  const titleTextForOriental = ["Maybe something oriental?"];
 
   const photosForBoxes = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Szklany_pojemnik_na_zywnosc_z_bambusowa_pokrywka_640_ml1_1800x1800.jpg?v=1626305036",
@@ -113,6 +114,22 @@ function App(props) {
   const priceForFavorites = [5, 10, 2, 12, 1, 3, 2, 2, 2, 2];
   const rateForFavorites = [5, 5, 5, 5, 5, 5, 5, 5];
 
+  const photosForOriental = [
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Panierka_Panko_200g.png?v=1654097521&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Tamaryndowa.jpg?v=1654100096&width=360",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Curry_zielona.jpg?v=1654099447&width=360",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_sos_rybny.jpg?v=1654101701&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Makaron_ryzowy_5mm_200g.jpg?v=1654100440&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Curry_czerwona.jpg?v=1654099102&width=360",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Curry_Zolta.jpg?v=1654099673&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/RyzJasminowyAsiaKitchen1000g.jpg?v=1654174071&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_OCET_RYZOWY_150ml.jpg?v=1627221864&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Makaron_ryzowy_5mm_400g.jpg?v=1654100821&width=360",
+  ];
+
+  const prciesForOriental = [2, 2, 2, 2, 1, 2, 2, 3, 1, 1];
+  const rateForOriental = [5, 5, 5, 5, 5, 5, 5, 5];
+
   const photosOnHoverForBoxes = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Szklanypojemniknazywnosczbambusowapokrywka640ml21-1_1800x1800.jpg?v=1626729699",
@@ -153,6 +170,19 @@ function App(props) {
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/wokring2_1800x1800.jpg?v=1671367064",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pokrywa_zaroodporna_Florina_28_cm_etykieta_1800x1800.jpg?v=1633819546",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Blacha_do_muffinek_na_6babeczek_28x18x3_5cm_Florina_Likoris_etykieta_gora_1800x1800.jpg?v=1629409212",
+  ];
+
+  const photosOnHoverForOriental = [
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Panierka_Panko_200g.png?v=1654097521&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Tamaryndowa.jpg?v=1654100096&width=360",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Curry_zielona.jpg?v=1654099447&width=360",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_sos_rybny.jpg?v=1654101701&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Makaron_ryzowy_5mm_200g.jpg?v=1654100440&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Curry_czerwona.jpg?v=1654099102&width=360",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Pasta_Curry_Zolta.jpg?v=1654099673&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/RyzJasminowyAsiaKitchen1000g.jpg?v=1654174071&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_OCET_RYZOWY_150ml.jpg?v=1627221864&width=540",
+    "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Makaron_ryzowy_5mm_400g.jpg?v=1654100821&width=360",
   ];
 
   return (
@@ -208,7 +238,14 @@ function App(props) {
         photosOnHoverForShopSection={photosOnHoverForFavorites}
         rateForShopSection={rateForFavorites}
       />
-      <VideoSection/>
+      <VideoSection />
+      <ShopifySection
+        pricesForShopSection={prciesForOriental}
+        titleTextForShopSection={titleTextForOriental}
+        photosForShopSection={photosForOriental}
+        photosOnHoverForShopSection={photosOnHoverForOriental}
+        rateForShopSection={rateForOriental}
+      />
     </Wrapper>
   );
 }
