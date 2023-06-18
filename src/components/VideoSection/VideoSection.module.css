@@ -1,0 +1,31 @@
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.video {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
+.paragraphs {
+  position: absolute;
+  z-index: 1;
+}
+
+.paragraphs p {
+  font-weight: 700;
+  text-align: center;
+  font-size: 68px;
+  color: rgb(191, 191, 191);
+}
+
+.paragraphs p:last-child {
+  font-weight: 400;
+  font-size: 42px;
+}
