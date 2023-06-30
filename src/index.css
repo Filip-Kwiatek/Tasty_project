@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: sans-serif;
+html, body, input, textarea {
+    font-family: "Lato", sans-serif;
 }
 
 body {

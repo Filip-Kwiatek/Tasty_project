@@ -9,6 +9,7 @@ import AdInformation from "./components/AdInformation/AdInformation";
 import FavoriteCategoriesSection from "./components/FavoriteCategoriesSection/FavoriteCategoriesSection.js";
 import Newsletter from "./components/Newsletter/Newsletter.js";
 import VideoSection from "./components/VideoSection/VideoSection.js";
+import FlagshipProductsSection from "./components/FlagshipProductsSection/FlagshipProductsSection.js";
 
 function App(props) {
   const photosForFoodTypeOne = [
@@ -246,6 +247,7 @@ function App(props) {
         photosOnHoverForShopSection={photosOnHoverForOriental}
         rateForShopSection={rateForOriental}
       />
+      <FlagshipProductsSection />
     </Wrapper>
   );
 }

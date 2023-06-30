@@ -9,12 +9,12 @@
   text-align: justify;
 }
 
-img {
+.items img {
   width: 85%;
   padding: 1%;
 }
 
-img:hover {
+.items img:hover {
   transform: scale(1.1);
   transition: 0.7s;
 }
