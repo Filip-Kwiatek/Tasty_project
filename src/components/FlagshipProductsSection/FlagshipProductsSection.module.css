@@ -51,6 +51,7 @@
 
 .icons > li {
   position: absolute;
+  cursor: pointer;
 }
 
 .icons > li a {

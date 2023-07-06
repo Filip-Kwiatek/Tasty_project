@@ -11,6 +11,7 @@ import Newsletter from "./components/Newsletter/Newsletter.js";
 import VideoSection from "./components/VideoSection/VideoSection.js";
 import FlagshipProductsSection from "./components/FlagshipProductsSection/FlagshipProductsSection.js";
 import ClientsOpinion from "./components/ClientsOpinion/ClientsOpinion.js";
+import Footer from "./components/Footer/Footer.js";
 
 function App(props) {
   const photosForFoodTypeOne = [
@@ -250,6 +251,7 @@ function App(props) {
       />
       <FlagshipProductsSection />
       <ClientsOpinion />
+      <Footer/>
     </Wrapper>
   );
 }

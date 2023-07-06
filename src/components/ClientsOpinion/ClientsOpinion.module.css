@@ -19,6 +19,7 @@
 
 .opinions {
   display: flex;
+  width: 740px;
 }
 
 .opinions ul {
@@ -36,6 +37,7 @@
 
 .opinions li:nth-child(2) {
   margin-top: 2px;
+  font-weight: 700;
 }
 
 .opinions li:nth-child(3) {
@@ -48,4 +50,10 @@
 
 .opinions li:nth-child(5) {
   margin-top: 16px;
+  margin-bottom: 50px;
+}
+
+.border {
+  width: 100%;
+  border-bottom: 1px solid rgb(235, 238, 239);
 }

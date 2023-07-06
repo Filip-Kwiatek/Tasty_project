@@ -12,6 +12,7 @@ const ClientsOpinion = () => {
       <section className={classes.opinions}>
         <Opinion />
       </section>
+      <div className={classes.border}></div>
     </section>
   );
 };
