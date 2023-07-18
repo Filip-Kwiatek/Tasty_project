@@ -1,3 +1,12 @@
+@media only screen and (max-width: 360px) {
+  .links {
+    display: none;
+  }
+  .fixed li {
+    display: none;
+  }
+}
+
 .links {
   list-style-type: none;
   display: flex;

@@ -1,3 +1,21 @@
+@media only screen and (max-width: 360px) {
+  .forms {
+    margin-top: 80px;
+  }
+  .forms ul {
+    max-width: 300px;
+  }
+  .forms button {
+    max-width: 125px;
+  }
+  input[name="login"] {
+    width: 150px;
+  }
+  input[name="password"] {
+    width: 150px;
+  }
+}
+
 input[name="login"] {
   width: 400px;
   height: 40px;
@@ -20,7 +38,7 @@ input[name="password"] {
   outline: none;
 }
 
-label {
+.label {
   display: flex;
   justify-content: left;
   margin-bottom: 2px;

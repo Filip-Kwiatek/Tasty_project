@@ -35,29 +35,29 @@ const SearchBar = (props) => {
   /*menuVisible ? "items" : "items_static"*/
   // button hide component
   return (
-    <div>
-      <Link to="/sale">
-        <SearchBarAd />
-      </Link>
-      <ul className={`items`}>
-        <li>
-          <Link to="/">LOGO</Link>
-        </li>
-        <li>
-          <SearchBarForm />
-        </li>
-        <li>
-          <Link to="/account">My account</Link>
-        </li>
-        {quantity === 0 ? (
-          renderBasketWhenQuantityIsZero()
-        ) : (
-          <li className={`basket`}>
-            <Link to="/basket">Basket</Link>
+      <div>
+        <Link to="/sale">
+          <SearchBarAd />
+        </Link>
+        <ul className={`items`}>
+          <li>
+            <Link to="/">LOGO</Link>
           </li>
-        )}
-      </ul>
-    </div>
+          <li>
+            <SearchBarForm />
+          </li>
+          <li>
+            <Link to="/account">My account</Link>
+          </li>
+          {quantity === 0 ? (
+            renderBasketWhenQuantityIsZero()
+          ) : (
+            <li className={`basket`}>
+              <Link to="/basket">Basket</Link>
+            </li>
+          )}
+        </ul>
+      </div>
   );
 };
 

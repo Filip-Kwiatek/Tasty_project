@@ -1,3 +1,13 @@
+@media only screen and (max-width: 360px) {
+  .shopping li {
+    margin-top: 70px;
+  }
+  .shopping button {
+    width: 170px;
+    height: auto;
+  }
+}
+
 .shopping {
   margin-top: 3%;
   width: 100%;

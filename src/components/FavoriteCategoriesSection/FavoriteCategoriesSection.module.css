@@ -1,3 +1,10 @@
+@media only screen and (max-width: 360px) {
+  .categories {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 header {
   text-align: center;
   font-size: 22px;
@@ -15,12 +22,15 @@ header {
 }
 
 .categories li {
-  margin-left: 50px;
+  margin-left: 75px;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
-  text-align: center;
   background-color: rgb(249, 245, 245);
+}
+
+.categories p {
+  text-align: center;
 }
 
 .categories a {
@@ -38,6 +48,7 @@ header {
 
 .categories img:hover {
   transform: translateY(-8px);
+  transition: 0.5s;
   border: 2px solid rgb(247, 245, 245);
   box-shadow: 9px 8px 24px 0px rgba(66, 68, 90, 1);
 }

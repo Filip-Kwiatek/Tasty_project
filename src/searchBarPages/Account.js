@@ -13,11 +13,11 @@ const Account = () => {
       <Form method="post" action="/events" className={`forms`}>
         <ul>
           <li>
-            <label>Login:</label>
+            <label className={`label`}>Login:</label>
             <input type="text" name="login" />
           </li>
           <li>
-            <label>Register:</label>
+            <label className={`label`}>Register:</label>
             <input type="text" name="password" />
           </li>
           <li>

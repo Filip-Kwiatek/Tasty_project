@@ -10,22 +10,22 @@ const Account = () => {
     <>
       <SearchBar />
       <Navbar />
-      <Form method="post"  className={`forms`}>
+      <Form method="post" className={`forms`}>
         <ul>
           <li>
-            <label>Login:</label>
+            <label className={`label`}>Login:</label>
             <input type="text" name="login" />
           </li>
           <li>
-            <label>Email:</label>
+            <label className={`label`}>Email:</label>
             <input type="text" name="email" />
           </li>
           <li>
-            <label>Password:</label>
+            <label className={`label`}>Password:</label>
             <input type="text" name="password" />
           </li>
           <li>
-            <label>Repeat password:</label>
+            <label className={`label`}>Repeat password:</label>
             <input type="text" name="repeat-password" />
           </li>
           <li>

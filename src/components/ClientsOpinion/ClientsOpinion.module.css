@@ -1,3 +1,16 @@
+@media only screen and (max-width: 360px) {
+  .opinions {
+    display: flex;
+    flex-direction: column;
+  }
+  .opinions li:nth-child(4) {
+    margin-bottom: -10px !important;
+  }
+  .opinions li:nth-child(5) {
+    margin-bottom: -10px !important;
+  }
+}
+
 .title {
   margin-top: 30px;
   display: flex;
