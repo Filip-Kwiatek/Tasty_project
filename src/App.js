@@ -2,7 +2,6 @@ import React from "react";
 
 import Navbar from "./components/Navbar/Navbar.js";
 import SearchBar from "./components/SearchBar/SearchBar";
-import Wrapper from "./components/UI/Wrapper";
 import SliderPhotos from "./components/Slider/SliderPhotos";
 import ShopifySection from "./components/ShopifySection/ShopifySection";
 import AdInformation from "./components/AdInformation/AdInformation";
@@ -189,7 +188,7 @@ function App(props) {
   ];
 
   return (
-    <Wrapper>
+    <>
       <SearchBar />
       <Navbar />
       <SliderPhotos
@@ -252,7 +251,7 @@ function App(props) {
       <FlagshipProductsSection />
       <ClientsOpinion />
       <Footer/>
-    </Wrapper>
+    </>
   );
 }
 

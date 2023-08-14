@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [scroll, setIsScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div>
       <div>
-        <ul className={`links ${scroll && menuVisible ? "fixed" : ""} `} >
+        <ul className={`links ${scroll && menuVisible ? "fixed" : ""} `}>
           <li>
             <Link to="/sale">Sale</Link>
           </li>
@@ -104,7 +104,9 @@ const Navbar = () => {
             <button
               className={`button ${scroll ? "hide" : ""}`}
               onClick={() => {
-                setIsScroll(handleClick);}}
+                setIsScroll(handleClick);
+                console.log('clicked');
+              }}
             >
               Hide Menu
             </button>

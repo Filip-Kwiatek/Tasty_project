@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import SearchBarForm from "./SearchBarForm.js";
@@ -8,6 +8,17 @@ import SearchBarAd from "./SearchBarAd.js";
 const SearchBar = (props) => {
   const quantity = 0;
   const [isBasketVisible, setIsBasketVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const [scroll, setIsScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScroll(window.scrollY > 100);
+    });
+  }, []);
 
   const renderBasketWhenQuantityIsZero = () => {
     if (isBasketVisible) {
@@ -35,29 +46,37 @@ const SearchBar = (props) => {
   /*menuVisible ? "items" : "items_static"*/
   // button hide component
   return (
-      <div>
-        <Link to="/sale">
-          <SearchBarAd />
-        </Link>
-        <ul className={`items`}>
-          <li>
-            <Link to="/">LOGO</Link>
+    <div>
+      <Link to="/sale">
+        <SearchBarAd />
+      </Link>
+      <ul className={`items`}>
+        <li onClick={scrollToTop}>
+          <Link to="/">LOGO</Link>
+        </li>
+        <li>
+          <SearchBarForm />
+        </li>
+        <li>
+          <Link to="/account">My account</Link>
+        </li>
+        {quantity === 0 ? (
+          renderBasketWhenQuantityIsZero()
+        ) : (
+          <li className={`basket`}>
+            <Link to="/basket">Basket</Link>
           </li>
-          <li>
-            <SearchBarForm />
-          </li>
-          <li>
-            <Link to="/account">My account</Link>
-          </li>
-          {quantity === 0 ? (
-            renderBasketWhenQuantityIsZero()
-          ) : (
-            <li className={`basket`}>
-              <Link to="/basket">Basket</Link>
-            </li>
-          )}
-        </ul>
-      </div>
+        )}
+        <li>
+          <button
+            onClick={props.toggleMenu}
+            className={`${scroll ? "button_visible" : "button_hidden"}`}
+          >
+            Show Menu
+          </button>
+        </li>
+      </ul>
+    </div>
   );
 };
 
