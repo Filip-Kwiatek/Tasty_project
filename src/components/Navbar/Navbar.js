@@ -1,29 +1,17 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 const Navbar = (props) => {
-  const [scroll, setIsScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setIsScroll(window.scrollY > 100);
-    });
-  }, []);
-
-  const [menuVisible, setMenuIsVisible] = useState(true);
-  const handleClick = () => {
-    setMenuIsVisible(!menuVisible);
-  };
   return (
-    <div>
+    <nav className={styles.root}>
       <div>
-        <ul className={`links ${scroll && menuVisible ? "fixed" : ""} `}>
+        <ul className={styles.links}>
           <li>
             <Link to="/sale">Sale</Link>
           </li>
-          <li className={`dropdown_equipment`}>
+          <li className={styles.dropdown_equipment}>
             <Link to="/equipment">Equipment</Link>
-            <ul className={`dropdown_equipment_content`}>
+            <ul className={styles.dropdown_equipment_content}>
               <li>
                 <Link to="/containers">Containers</Link>
               </li>
@@ -77,9 +65,9 @@ const Navbar = (props) => {
               </li>
             </ul>
           </li>
-          <li className={`dropdown_edibles`}>
+          <li className={styles.dropdown_edibles}>
             <Link to="/edibles">Edibles</Link>
-            <ul className={`dropdown_edibles_content`}>
+            <ul className={styles.dropdown_edibles_content}>
               <li>
                 <Link to="/seasonings">Seasonings</Link>
               </li>
@@ -102,10 +90,9 @@ const Navbar = (props) => {
           </li>
           <li>
             <button
-              className={`button ${scroll ? "hide" : ""}`}
+              className={styles.button}
               onClick={() => {
-                setIsScroll(handleClick);
-                console.log('clicked');
+                props.handleHideMenu();
               }}
             >
               Hide Menu
@@ -113,7 +100,7 @@ const Navbar = (props) => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

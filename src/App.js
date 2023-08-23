@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar/Navbar.js";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -12,7 +12,7 @@ import FlagshipProductsSection from "./components/FlagshipProductsSection/Flagsh
 import ClientsOpinion from "./components/ClientsOpinion/ClientsOpinion.js";
 import Footer from "./components/Footer/Footer.js";
 
-function App(props) {
+function App() {
   const photosForFoodTypeOne = [
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/files/Policzona_Szama_LunchBOXy_glass_pluss_Image_banerHome.jpg?v=1679430629&width=1000",
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/files/Policzona_Szama_LunchBOX-bambus_31d74305-fb3f-429a-8792-905742a7b39f.jpg?v=1678699625&width=1200",
@@ -187,10 +187,25 @@ function App(props) {
     "https://cdn.shopify.com/s/files/1/0559/7881/9741/products/Policzona_Szama_Makaron_ryzowy_5mm_400g.jpg?v=1654100821&width=360",
   ];
 
+  const [isNavbarShown, setIsNavbarShown] = useState(true);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < 100) {
+        setIsNavbarShown(true);
+      }
+    });
+    
+  }, []);
+
   return (
     <>
-      <SearchBar />
-      <Navbar />
+      <SearchBar
+        isNavbarShown={isNavbarShown}
+        handleShowMenu={() => setIsNavbarShown(true)}
+      />
+      {isNavbarShown && <Navbar
+        handleHideMenu={() => setIsNavbarShown(false)}
+      />}
       <SliderPhotos
         photosForSlider={photosForFoodTypeOne}
         mainTextForSlider={mainTextForFoodTypeOne}
@@ -250,7 +265,7 @@ function App(props) {
       />
       <FlagshipProductsSection />
       <ClientsOpinion />
-      <Footer/>
+      <Footer />
     </>
   );
 }

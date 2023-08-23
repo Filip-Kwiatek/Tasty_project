@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import SearchBarForm from "./SearchBarForm.js";
-import "./SearchBar.css";
 import SearchBarAd from "./SearchBarAd.js";
+import styles from "./SearchBar.module.css";
 
 const SearchBar = (props) => {
   const quantity = 0;
@@ -17,18 +16,19 @@ const SearchBar = (props) => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setIsScroll(window.scrollY > 100);
+      console.log(scroll);
     });
-  }, []);
+  });
 
   const renderBasketWhenQuantityIsZero = () => {
     if (isBasketVisible) {
       return (
         <li
-          className={`basket_quantity`}
+          className={styles.basket_quantity}
           onClick={() => setIsBasketVisible(false)}
         >
           Close
-          <li className={`basket_pop_up`}>
+          <li className={styles.basket_pop_up}>
             You have {quantity} items in your basket.
           </li>
         </li>
@@ -36,7 +36,7 @@ const SearchBar = (props) => {
     }
     return (
       <li
-        className={`basket_quantity`}
+        className={styles.basket_quantity}
         onClick={() => setIsBasketVisible(true)}
       >
         Basket
@@ -46,11 +46,11 @@ const SearchBar = (props) => {
   /*menuVisible ? "items" : "items_static"*/
   // button hide component
   return (
-    <div>
+    <nav className={styles.root}>
       <Link to="/sale">
         <SearchBarAd />
       </Link>
-      <ul className={`items`}>
+      <ul className={styles.items}>
         <li onClick={scrollToTop}>
           <Link to="/">LOGO</Link>
         </li>
@@ -63,20 +63,24 @@ const SearchBar = (props) => {
         {quantity === 0 ? (
           renderBasketWhenQuantityIsZero()
         ) : (
-          <li className={`basket`}>
+          <li className={styles.basket}>
             <Link to="/basket">Basket</Link>
           </li>
         )}
         <li>
-          <button
-            onClick={props.toggleMenu}
-            className={`${scroll ? "button_visible" : "button_hidden"}`}
-          >
-            Show Menu
-          </button>
+          {!props.isNavbarShown && (
+            <button
+              onClick={() => {
+                props.handleShowMenu();
+              }}
+              className={styles.button_visible}
+            >
+              Show Menu
+            </button>
+          )}
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
